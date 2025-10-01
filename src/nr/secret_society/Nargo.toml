@@ -1,7 +1,8 @@
 [package]
-name = "private_vote_counter"
+name = "secret_society"
 type = "contract"
 authors = [""]
 
 [dependencies]
 aztec = { git = "https://github.com/AztecProtocol/aztec-packages/", tag = "v2.0.2", directory = "noir-projects/aztec-nr/aztec" }
+address_note = { git = "https://github.com/AztecProtocol/aztec-packages/", tag = "v2.0.2", directory = "noir-projects/aztec-nr/address-note" }

@@ -1,7 +1,7 @@
 [workspace]
 members = [
-    "src/nr/private_vote_counter",
+    "src/nr/secret_society",
 ]
 
 [benchmark]
-private_vote_counter = "benchmarks/private_vote_counter.benchmark.ts"
+private_vote_counter = "benchmarks/secret_society.benchmark.ts"
