@@ -1,5 +1,15 @@
 use aztec::macros::aztec;
 
+// Possible improvements:
+// - adding functionality to rotate the admin
+// - store the moderators and members in a semaphore like structure
+// - add utility functions to check if a user is a moderator or member
+// - add note getter funcionality so users can prove they are a member or moderator
+// - allow another contract to add a member or moderator if approved with an authwit
+// - emit events
+// - add tests
+// - composability -- call a counter only if you are a member
+
 #[aztec]
 pub contract SecretSociety {
     use address_note::address_note::AddressNote;
@@ -20,6 +30,7 @@ pub contract SecretSociety {
         admin: PublicMutable<AztecAddress, Context>,
         // Private sets - membership is secret
         moderators: PrivateSet<AddressNote, Context>,
+        // this is public for now, but there are more advanced techniques to do this privately
         is_moderator: Map<AztecAddress, PublicMutable<bool, Context>, Context>,
         members: PrivateSet<AddressNote, Context>,
     }
